@@ -1,0 +1,9 @@
+blitz generate all category
+blitz g model category name:string
+blitz g model category active:boolean:default=false
+blitz generate all service
+blitz g model service belongsTo:category?
+
+blitz g model project tasks:Task[]
+blitz prisma format
+blitz prisma migrate dev
